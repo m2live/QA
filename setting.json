@@ -9,7 +9,7 @@
     "contents": {
       "dvhls": {
         "run": {
-          "enable": false
+          "enable": true
         }
       }
     }
