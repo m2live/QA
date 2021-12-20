@@ -3,14 +3,14 @@
     "version": 1,
     "hostName": "winesoftQA",
     "admin": "admin@example.com",
-    "defaultHosting": "qa.dims.com"
+    "defaultHosting": "qa.dvhls.com"
   },
   "functions": {
     "contents": {
-      "dims": {
-        "meta": {
+      "dvhls": {
+        "run": {
           "enable": true,
-          "maxSourceSize": 100
+          "keyword": "hlshlshlshls"
         }
       }
     }
