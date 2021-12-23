@@ -1,18 +1,21 @@
 {
-  "meta": {
-    "version": 1,
-    "hostName": "winesoftQA",
-    "admin": "admin@example.com",
-    "defaultHosting": "qa.dims.com"
-  },
-  "functions": {
-    "contents": {
-      "dims": {
-        "meta": {
-          "enable": true,
-          "maxSourceSize": 100
+    "functions": {
+        "contents": {
+            "dims": {
+                "meta": {
+                    "enable": true,
+                    "keyword": "dims",
+                    "minSourceSize": 0,
+                    "maxSourceSize": 10
+                }
+            }
         }
-      }
-    }
-  }
+    },
+    "hosting": [
+        {
+            "name": "test.cli.m2",
+            "enable": true,
+            "listen": "*:80"
+        }
+    ]
 }
