@@ -4,9 +4,7 @@
             "dims": {
                 "meta": {
                     "enable": true,
-                    "keyword": "dims",
-                    "minSourceSize": 0,
-                    "maxSourceSize": 10
+                    "keyword": "dims"
                 }
             }
         }
