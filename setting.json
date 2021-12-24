@@ -3,7 +3,7 @@
         "version": 1,
         "hostName": "winesoftQA",
         "admin": "admin@example.com",
-        "defaultHosting": "qa.dims.com"
+        "defaultHosting": "qa.m2"
     },
     "functions": {
         "contents": {
@@ -17,7 +17,7 @@
     },
     "hosting": [
         {
-            "name": "qa.dims.com",
+            "name": "qa.m2",
             "enable": true,
             "listen": "*:80",
             "origin": {
