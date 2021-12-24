@@ -3,7 +3,7 @@
         "contents": {
             "dims": {
                 "meta": {
-                    "enable": true,
+                    "enable": false,
                     "keyword": "dims"
                 }
             }
