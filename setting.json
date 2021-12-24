@@ -18,7 +18,14 @@
     "hosting": [
         {
             "name": "qa.dims.com",
-            "listen": "*:80"
+            "enable": true,
+            "listen": "*:80",
+            "origin": {
+                "protocol": "http",
+                "address": [
+                    "0.0.0.0"
+                ]
+            }
         }
     ]
 }
