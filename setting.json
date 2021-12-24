@@ -1,31 +1,30 @@
 {
-  "meta": {
-      "version": 1,
-      "hostName": "winesoftQA",
-      "admin": "admin@example.com",
-      "defaultHosting": "qa.dims.com"
-  },
-  "functions": {
-      "contents": {
-          "dims": {
-              "meta": {
-                  "enable": false,
-                  "keyword": "dims"
-              }
-          }
-      }
-  },
-  "hosting": [
-      {
-          "name": "qa.dims.com",
-          "enable": true,
-          "listen": "*:80",
-          "origin": {
-              "protocol": "http",
-              "address": [
-                  "0.0.0.0"
-              ]
-          }
-      }
-  ]
+    "meta": {
+        "version": 1,
+        "hostName": "winesoftQA",
+        "admin": "admin@example.com",
+        "defaultHosting": "qa.dims.com"
+    },
+    "functions": {
+        "contents": {
+            "dims": {
+                "meta": {
+                    
+                }
+            }
+        }
+    },
+    "hosting": [
+        {
+            "name": "qa.dims.com",
+            "enable": true,
+            "listen": "*:80",
+            "origin": {
+                "protocol": "http",
+                "address": [
+                    "0.0.0.0"
+                ]
+            }
+        }
+    ]
 }
