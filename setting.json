@@ -2,12 +2,22 @@
     "meta": {
         "version": 1,
         "hostName": "winesoftQA",
-        "admin": "admin@example.com",
-        "defaultHosting": "qa.m2"
+        "admin": "admin@example.com"
     },
     "hosting": [
         {
-            "name": "qa.m2",
+            "name": "a.com",
+            "enable": true,
+            "listen": "*:80",
+            "origin": {
+                "protocol": "https",
+                "address": [
+                    "www.google.com"
+                ]
+            }
+        },
+        {
+            "name": "b.com",
             "enable": true,
             "listen": "*:80",
             "origin": {
