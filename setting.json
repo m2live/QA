@@ -3,7 +3,7 @@
         "version": 1,
         "hostName": "winesoftQA",
         "admin": "admin@example.com",
-        "defaultHosting": "qa.m3"
+        "defaultHosting": "qa.m4"
     },
     "functions": {
         "contents": {
