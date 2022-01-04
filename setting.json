@@ -1,8 +1,21 @@
 {
- "meta":{
-    "version" : 1,
-    "hostName": "winesoftQA",
-    "admin": "admin@example.com",
-    "defaultHosting": "qa.dims.com"
-  }
+    "meta": {
+        "version": 1,
+        "hostName": "winesoftQA",
+        "admin": "admin@example.com",
+        "defaultHosting": "qa.m2"
+    },
+    "hosting": [
+        {
+            "name": "qa.m2",
+            "enable": true,
+            "listen": "*:80",
+            "origin": {
+                "protocol": "https",
+                "address": [
+                    "www.google.com"
+                ]
+            }
+        }
+    ]
 }
