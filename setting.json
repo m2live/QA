@@ -6,28 +6,6 @@
     },
     "hosting": [
         {
-            "name": "a.com",
-            "enable": true,
-            "listen": "*:80",
-            "origin": {
-                "protocol": "https",
-                "address": [
-                    "www.google.com"
-                ]
-            }
-        },
-        {
-            "name": "b.com",
-            "enable": true,
-            "listen": "*:80",
-            "origin": {
-                "protocol": "https",
-                "address": [
-                    "www.google.com"
-                ]
-            }
-        },
-        {
             "name": "c.com",
             "enable": true,
             "listen": "*:80",
