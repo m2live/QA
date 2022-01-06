@@ -3,23 +3,27 @@
         "version": 1,
         "hostName": "winesoftQA",
         "admin": "admin@example.com",
-        "defaultHosting": "qa.m5"
+        "defaultHosting": "qa.winesoft.co.kr"
     },
     "functions": {
         "contents": {
             "dims": {
+                "meta": {
+                    "enable": true,
+                    "keyword": "dims"
+                }
             }
         }
     },
     "hosting": [
         {
-            "name": "qa.m2",
+            "name": "qa.winesoft.co.kr",
             "enable": true,
             "listen": "*:80",
             "origin": {
                 "protocol": "http",
                 "address": [
-                    "0.0.0.0"
+                    "192.168.0.68"
                 ]
             }
         }
