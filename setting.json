@@ -10,7 +10,7 @@
             "dims": {
                 "meta": {
                     "enable": true,
-                    "keyword": "dims"
+                    "keyword": "dim"
                 }
             }
         }
