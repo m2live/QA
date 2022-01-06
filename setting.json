@@ -3,28 +3,156 @@
         "version": 1,
         "hostName": "winesoftQA",
         "admin": "admin@example.com",
-        "defaultHosting": "qa.c3"
-    },
-    "functions": {
-        "contents": {
-            "dims": {
-                "meta": {
-                    "enable": true,
-                    "keyword": "dims"
-                }
-            }
-        }
+        "defaultHosting": "qa.winesoft.co.kr"
     },
     "hosting": [
         {
-            "name": "qa.m2",
+            "name": "qa.winesoft.co.kr",
             "enable": true,
             "listen": "*:80",
             "origin": {
                 "protocol": "http",
                 "address": [
-                    "0.0.0.0"
+                    "192.168.0.50"
                 ]
+            },
+            "functions": {
+                "contents": {
+                    "dims": {
+                        "meta": {
+                            "enable": true,
+                            "keyword": "dims"
+                        },
+                        "annotation": [
+                            {
+                                "name": "annotation_nw",
+                                "value": "WineSOFT",
+                                "font": "NanumGothic-Bold.ttf",
+                                "fontSize": 50,
+                                "fontColor": "#000000",
+                                "textAlign": "center",
+                                "backgroundColor": "#FFFFFF",
+                                "backgroundWidth": 0,
+                                "backgroundHeight": 0,
+                                "gravity": "nw",
+                                "geometry": "+0+0",
+                                "dissolve": 50
+                            },
+                            {
+                                "name": "annotation_n",
+                                "value": "WineSOFT",
+                                "font": "NanumGothic-Bold.ttf",
+                                "fontSize": 50,
+                                "fontColor": "#000000",
+                                "textAlign": "center",
+                                "backgroundColor": "#FFFFFF",
+                                "backgroundWidth": 0,
+                                "backgroundHeight": 0,
+                                "gravity": "n",
+                                "geometry": "+0+0",
+                                "dissolve": 50
+                            },
+                            {
+                                "name": "annotation_ne",
+                                "value": "WineSOFT",
+                                "font": "NanumGothic-Bold.ttf",
+                                "fontSize": 50,
+                                "fontColor": "#000000",
+                                "textAlign": "center",
+                                "backgroundColor": "#FFFFFF",
+                                "backgroundWidth": 0,
+                                "backgroundHeight": 0,
+                                "gravity": "ne",
+                                "geometry": "+0+0",
+                                "dissolve": 50
+                            },
+                            {
+                                "name": "annotation_w",
+                                "value": "WineSOFT",
+                                "font": "NanumGothic-Bold.ttf",
+                                "fontSize": 50,
+                                "fontColor": "#000000",
+                                "textAlign": "center",
+                                "backgroundColor": "#FFFFFF",
+                                "backgroundWidth": 0,
+                                "backgroundHeight": 0,
+                                "gravity": "w",
+                                "geometry": "+0+0",
+                                "dissolve": 50
+                            },
+                            {
+                                "name": "annotation_c",
+                                "value": "WineSOFT",
+                                "font": "NanumGothic-Bold.ttf",
+                                "fontSize": 50,
+                                "fontColor": "#000000",
+                                "textAlign": "center",
+                                "backgroundColor": "#FFFFFF",
+                                "backgroundWidth": 0,
+                                "backgroundHeight": 0,
+                                "gravity": "c",
+                                "geometry": "+0+0",
+                                "dissolve": 50
+                            },
+                            {
+                                "name": "annotation_e",
+                                "value": "WineSOFT",
+                                "font": "NanumGothic-Bold.ttf",
+                                "fontSize": 50,
+                                "fontColor": "#000000",
+                                "textAlign": "center",
+                                "backgroundColor": "#FFFFFF",
+                                "backgroundWidth": 0,
+                                "backgroundHeight": 0,
+                                "gravity": "e",
+                                "geometry": "+0+0",
+                                "dissolve": 50
+                            },
+                            {
+                                "name": "annotation_sw",
+                                "value": "WineSOFT",
+                                "font": "NanumGothic-Bold.ttf",
+                                "fontSize": 50,
+                                "fontColor": "#000000",
+                                "textAlign": "center",
+                                "backgroundColor": "#FFFFFF",
+                                "backgroundWidth": 0,
+                                "backgroundHeight": 0,
+                                "gravity": "sw",
+                                "geometry": "+0+0",
+                                "dissolve": 50
+                            },
+                            {
+                                "name": "annotation_s",
+                                "value": "WineSOFT",
+                                "font": "NanumGothic-Bold.ttf",
+                                "fontSize": 50,
+                                "fontColor": "#000000",
+                                "textAlign": "center",
+                                "backgroundColor": "#FFFFFF",
+                                "backgroundWidth": 0,
+                                "backgroundHeight": 0,
+                                "gravity": "s",
+                                "geometry": "+0+0",
+                                "dissolve": 50
+                            },
+                            {
+                                "name": "annotation_se",
+                                "value": "WineSOFT",
+                                "font": "NanumGothic-Bold.ttf",
+                                "fontSize": 50,
+                                "fontColor": "#000000",
+                                "textAlign": "center",
+                                "backgroundColor": "#FFFFFF",
+                                "backgroundWidth": 0,
+                                "backgroundHeight": 0,
+                                "gravity": "se",
+                                "geometry": "+0+0",
+                                "dissolve": 50
+                            }
+                        ]
+                    }
+                }
             }
         }
     ]
