@@ -7,7 +7,7 @@
     },
     "hosting": [
         {
-            "name": "qa.winesoft.co.k",
+            "name": "qa.winesoft.co.kr",
             "enable": true,
             "listen": "*:80",
             "origin": {
