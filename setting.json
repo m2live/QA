@@ -3,7 +3,7 @@
         "version": 1,
         "hostName": "winesoftQA",
         "admin": "admin@example.com",
-        "defaultHosting": "qa.winesoft.co.kr"
+        "defaultHosting": "qa.winesoft.co.k"
     },
     "hosting": [
         {
