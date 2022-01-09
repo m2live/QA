@@ -20,8 +20,8 @@
                 "contents": {
                     "dims": {
                         "meta": {
-                            "enable": true,
-                            "keyword": "dims"
+                            "enable": true
+                            
                         },
                         "quality": {
                             "max": 99,
