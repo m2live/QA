@@ -1,3 +1,7 @@
 {
-  "meta": {}
+  "hosting": [
+    {
+      "enable": true
+    }
+  ]
 }
