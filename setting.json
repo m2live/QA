@@ -1,6 +1,6 @@
 {
     "meta": {
-        "version": 1,
+        "version": 2,
         "hostName": "winesoftQA",
         "admin": "admin@example.com",
         "defaultHosting": "qa.winesoft.co.kr"
