@@ -707,7 +707,7 @@
                                     "matchingList": [
                                         {
                                             "pattern": "$URL[*]",
-                                            "header": "    $RES[x-m2-cache-result:#CACHEHIT]"
+                                            "header": "$RES[x-m2-cache-result:#CACHEHIT]"
                                         }
                                     ]
                                 }
