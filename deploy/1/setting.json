@@ -480,7 +480,7 @@
                     "dims": {
                         "meta": {
                             "enable": true,
-                            "keyword": "dims"
+                            "keyword": ""
                         },
                         "quality": {
                             "max": 99,
@@ -689,7 +689,7 @@
                                     "max": 0
                                 },
                                 "res2xx": {
-                                    "sec": 30,
+                                    "sec": 86400,
                                     "ratio": 0,
                                     "max": 0
                                 },
@@ -707,13 +707,29 @@
                                     "matchingList": [
                                         {
                                             "pattern": "$URL[*]",
-                                            "header": "$RES[x-m2-cache-result:#CACHEHIT]"
+                                            "header": "$RES[x-m2-cache-result:#CACHEHIT]",
+                                            "mode": "Set"
                                         }
                                     ]
                                 }
                             },
                             "accessControl": {
-                                "enable": true
+                                "enable": true,
+                                "matchingList": [
+                                    {
+                                        "pattern": "$URL[*?*acl=deny*]",
+                                        "action": "deny",
+                                        "denialCode": 403
+                                    }
+                                ]
+                            },
+                            "bypass": {
+                                "matchingList": [
+                                    {
+                                        "pattern": "$URL[*?*bypass=true*]",
+                                        "action": "bypass"
+                                    }
+                                ]
                             }
                         }
                     }
@@ -723,22 +739,7 @@
                 {
                     "accessLogUrl": "Replace",
                     "pattern": "(.*)/(.*)/code/(.*)",
-                    "replace": "status-code.winesoft.co.kr/chain/dev-status?status=#311"
-                },
-                {
-                    "accessLogUrl": "Replace",
-                    "pattern": "(.*)/(.*)/code/(.*)",
-                    "replace": "status-code.winesoft.co.kr/chain/dev-status?status=#322"
-                },
-                {
-                    "accessLogUrl": "Replace",
-                    "pattern": "(.*)/(.*)/code/(.*)",
-                    "replace": "status-code.winesoft.co.kr/chain/dev-status?status=#333"
-                },
-                {
-                    "accessLogUrl": "Replace",
-                    "pattern": "(.*)/(.*)/code/(.*)",
-                    "replace": "status-code.winesoft.co.kr/chain/dev-status?status=#344"
+                    "replace": "status-code.winesoft.co.kr/chain/dev-status?status=#3"
                 }
             ]
         },
