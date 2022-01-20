@@ -708,7 +708,7 @@
                                         {
                                             "pattern": "$URL[*]",
                                             "header": "$RES[x-m2-cache-result:#CACHEHIT]",
-                                            "mode": "Set"
+                                            "mode": "set"
                                         }
                                     ]
                                 }
