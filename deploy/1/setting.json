@@ -423,7 +423,7 @@
     },
     "hosting": [
         {
-            "name": "qa.winesoft.co.kr",
+            "name": "post-test.winesoft.co.kr",
             "https": [
                 {
                     "options": {
@@ -434,6 +434,66 @@
                     }
                 }
             ],
+            "enable": true,
+            "origin": {
+                "protocol": "HTTP",
+                "address": [
+                    "192.168.0.86"
+                ]
+            },
+            "listen": "*:80",
+            "functions": {
+                "network": {
+                    "http": {
+                        "frontEnd": {
+                            "bypass": {
+                                "postMethod": {
+                                    "enable": false,
+                                    "enableBackendAffinity": true,
+                                    "enableSticky": true
+                                },
+                                "matchingList": [
+                                    {
+                                        "pattern": "$URL[*?*bypass=true*]",
+                                        "action": "bypass"
+                                    }
+                                ]
+                            },
+                            "headers": {
+                                "modify": {
+                                    "enable": true,
+                                    "matchingList": [
+                                        {
+                                            "pattern": "$URL[*]",
+                                            "header": "$RES[x-m2-cache-result:#CACHEHIT]",
+                                            "mode": "Set"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "cache": {
+                        "cachingKey": {
+                            "postMethod": {
+                                "enable": true,
+                                "bodyContentLengthMax": 102400,
+                                "bodySensitive": true
+                            }
+                        }
+                    }
+                }
+            },
+            "urlRewrites": [
+                {
+                    "accessLogUrl": "Replace",
+                    "pattern": "(.*)/test-origin/post_test.php\\?(.*)",
+                    "replace": "post-test.winesoft.co.kr/test-origin/post_test.php?#2"
+                }
+            ]
+        },
+        {
+            "name": "qa.winesoft.co.kr",
             "enable": true,
             "origin": {
                 "protocol": "HTTP",
@@ -480,7 +540,7 @@
                     "dims": {
                         "meta": {
                             "enable": true,
-                            "keyword": "dims"
+                            "keyword": ""
                         },
                         "quality": {
                             "max": 99,
