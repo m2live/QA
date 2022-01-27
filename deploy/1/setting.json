@@ -540,7 +540,7 @@
                     "dims": {
                         "meta": {
                             "enable": true,
-                            "keyword": ""
+                            "keyword": "dims"
                         },
                         "quality": {
                             "max": 99,
