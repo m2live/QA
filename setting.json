@@ -1,7 +1,7 @@
 {
  "meta":{
-    "version" : 1,
-    "hostName": "winesoftQA",
+    "version" : 2,
+    "hostName": "winesoftQA-stage",
     "admin": "admin@example.com",
     "defaultHosting": "qa.dims.com"
   }
