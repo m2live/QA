@@ -746,7 +746,8 @@
                         "ttl": {
                             "resCode": {
                                 "noCache": {
-                                    "max": 0
+                                    "sec": 86400,
+                                    "max": 0                                    
                                 },
                                 "res2xx": {
                                     "sec": 86400,
