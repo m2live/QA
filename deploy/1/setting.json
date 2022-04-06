@@ -212,10 +212,20 @@
                         "denialCode": 401
                     },
                     "compression": {
-                        "enable": false,
-                        "minSrcSize": 2,
-                        "maxSrcSize": 2048
-                    },
+                        "meta": {
+                            "enable": false,
+                            "keyword": "hcpr",
+                            "minSrcSize": 2,
+                            "maxSrcSize": 2048
+                        },
+                        "gzip": {
+                            "level": 6
+                        },
+                        "brotli": {
+                            "window": 22,
+                            "quality": 11
+                        }
+                    }
                     "customErrorPage": {
                         "resCode": 0
                     }
@@ -302,64 +312,39 @@
                     }
                 }
             },
-            "dvtrim": {
-                "upfrontHeader": {
-                    "mp4": false,
-                    "m4a": false
+            "mp3edit": {
+                "meta": {
+                    "enable": false,
+                    "keyword": "mp3edit",
+                    "segmentType": "ts",
+                    "insertPcr": false
                 },
-                "trimming": {
-                    "mp4": {
-                        "enable": false,
-                        "allTracks": false,
-                        "startParam": "start",
-                        "endParam": "end",
-                        "multiParam": "trimming",
-                        "maxRatio": 50
-                    },
-                    "mp3": {
-                        "trimming": {
-                            "enable": false,
-                            "startParam": "start",
-                            "endParam": "end"
-                        }
-                    },
-                    "m4a": {
-                        "enable": false,
-                        "startParam": "start",
-                        "endParam": "end",
-                        "multiParam": "trimming"
-                    }
-                }
-            },
-            "dvhls": {
-                "mp4": {
-                    "run": {
-                        "enable": false,
-                        "keyword": "mp4hls",
-                        "duration": 10
-                    },
+                "hls": {
+                    "duration": 10,
+                    "indexName": "index.m3u8",
                     "playlist": {
-                        "indexName": "index.m3u8",
                         "version": 3,
                         "alternates": false,
                         "alternatesName": "playlist.m3u8",
                         "sequence": 0
                     }
+                }
+            },
+            "mp4edit": {
+                "meta": {
+                    "enable": false,
+                    "keyword": "mp4edit",
+                    "useAllTracks": false,
+                    "trimMaxRatio": 50
                 },
-                "mp3": {
-                    "meta": {
-                        "enable": false,
-                        "keyword": "mp3hls",
-                        "segmentType": "ts",
-                        "insertPcr": false,
-                        "duration": 10
-                    },
+                "hls": {
+                    "duration": 10,
+                    "indexName": "index.m3u8",
                     "playlist": {
-                        "indexName": "index.m3u8",
                         "version": 3,
                         "alternates": false,
-                        "sequence": 0,
-                        "alternatesName": "playlist.m3u8"
+                        "alternatesName": "playlist.m3u8",
+                        "sequence": 0
                     }
                 }
             }
@@ -504,39 +489,6 @@
             "listen": "*:80",
             "functions": {
                 "contents": {
-                    "dvtrim": {
-                        "upfrontHeader": {
-                            "mp4": true,
-                            "m4a": true
-                        },
-                        "trimming": {
-                            "mp4": {
-                                "enable": true,
-                                "allTracks": true
-                            },
-                            "m4a": {
-                                "enable": true
-                            },
-                            "mp3": {
-                                "trimming": {
-                                    "enable": true
-                                }
-                            }
-                        }
-                    },
-                    "dvhls": {
-                        "mp4": {
-                            "run": {
-                                "enable": true
-                            }
-                        },
-                        "mp3": {
-                            "meta": {
-                                "enable": true,
-                                "segmentType": "mp3"
-                            }
-                        }
-                    },
                     "dims": {
                         "meta": {
                             "enable": true,
@@ -747,7 +699,7 @@
                             "resCode": {
                                 "noCache": {
                                     "sec": 86400,
-                                    "max": 0                                    
+                                    "max": 0
                                 },
                                 "res2xx": {
                                     "sec": 86400,
