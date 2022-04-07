@@ -311,42 +311,6 @@
                         "algorithm": "RC4"
                     }
                 }
-            },
-            "mp3edit": {
-                "meta": {
-                    "enable": false,
-                    "keyword": "mp3edit",
-                    "segmentType": "ts",
-                    "insertPcr": false
-                },
-                "hls": {
-                    "duration": 10,
-                    "indexName": "index.m3u8",
-                    "playlist": {
-                        "version": 3,
-                        "alternates": false,
-                        "alternatesName": "playlist.m3u8",
-                        "sequence": 0
-                    }
-                }
-            },
-            "mp4edit": {
-                "meta": {
-                    "enable": false,
-                    "keyword": "mp4edit",
-                    "useAllTracks": false,
-                    "trimMaxRatio": 50
-                },
-                "hls": {
-                    "duration": 10,
-                    "indexName": "index.m3u8",
-                    "playlist": {
-                        "version": 3,
-                        "alternates": false,
-                        "alternatesName": "playlist.m3u8",
-                        "sequence": 0
-                    }
-                }
             }
         },
         "operations": {
@@ -409,6 +373,14 @@
     "hosting": [
         {
             "name": "post-test.winesoft.co.kr",
+            "enable": true,
+            "origin": {
+                "protocol": "HTTP",
+                "address": [
+                    "141.164.49.179:8080"
+                ]
+            },
+            "listen": "*:80",
             "https": [
                 {
                     "options": {
@@ -419,14 +391,6 @@
                     }
                 }
             ],
-            "enable": true,
-            "origin": {
-                "protocol": "HTTP",
-                "address": [
-                    "141.164.49.179:8080"
-                ]
-            },
-            "listen": "*:80",
             "functions": {
                 "network": {
                     "http": {
@@ -489,6 +453,41 @@
             "listen": "*:80",
             "functions": {
                 "contents": {
+                    "mp4edit": {
+                        "meta": {
+                            "enable": true,
+                            "keyword": "mp4edit",
+                            "useAllTracks": true,
+                            "trimMaxRatio": 0
+                        },
+                        "hls": {
+                            "duration": 10,
+                            "indexName": "index.m3u8",
+                            "playlist": {
+                                "version": 3,
+                                "alternates": false,
+                                "alternatesName": "playlist.m3u8",
+                                "sequence": 0
+                            }
+                        }
+                    },
+                    "mp3edit": {
+                        "meta": {
+                            "enable": true,
+                            "keyword": "mp3edit",
+                            "segmentType": "MP3"
+                        },
+                        "hls": {
+                            "duration": 10,
+                            "indexName": "index.m3u8",
+                            "playlist": {
+                                "version": 3,
+                                "alternates": false,
+                                "alternatesName": "playplaylist.m3u8",
+                                "sequence": 0
+                            }
+                        }
+                    },
                     "dims": {
                         "meta": {
                             "enable": true,
@@ -558,134 +557,6 @@
                             {
                                 "name": "composite_se",
                                 "file": "/usr/local/m2/rt/winesoft.png",
-                                "gravity": "se",
-                                "geometry": "+0+0",
-                                "dissolve": 50
-                            }
-                        ],
-                        "annotation": [
-                            {
-                                "value": "WineSOFT",
-                                "name": "annotation_nw",
-                                "font": "NanumGothic-Bold.ttf",
-                                "fontSize": 50,
-                                "fontColor": "#000000",
-                                "textAlign": "center",
-                                "backgroundWidth": 0,
-                                "backgroundHeight": 0,
-                                "backgroundColor": "#FFFFFF",
-                                "gravity": "nw",
-                                "geometry": "+0+0",
-                                "dissolve": 50
-                            },
-                            {
-                                "value": "WineSOFT",
-                                "name": "annotation_n",
-                                "font": "NanumGothic-Bold.ttf",
-                                "fontSize": 50,
-                                "fontColor": "#000000",
-                                "textAlign": "center",
-                                "backgroundWidth": 0,
-                                "backgroundHeight": 0,
-                                "backgroundColor": "#FFFFFF",
-                                "gravity": "n",
-                                "geometry": "+0+0",
-                                "dissolve": 50
-                            },
-                            {
-                                "value": "WineSOFT",
-                                "name": "annotation_ne",
-                                "font": "NanumGothic-Bold.ttf",
-                                "fontSize": 50,
-                                "fontColor": "#000000",
-                                "textAlign": "center",
-                                "backgroundWidth": 0,
-                                "backgroundHeight": 0,
-                                "backgroundColor": "#FFFFFF",
-                                "gravity": "ne",
-                                "geometry": "+0+0",
-                                "dissolve": 50
-                            },
-                            {
-                                "value": "WineSOFT",
-                                "name": "annotation_w",
-                                "font": "NanumGothic-Bold.ttf",
-                                "fontSize": 50,
-                                "fontColor": "#000000",
-                                "textAlign": "center",
-                                "backgroundWidth": 0,
-                                "backgroundHeight": 0,
-                                "backgroundColor": "#FFFFFF",
-                                "gravity": "w",
-                                "geometry": "+0+0",
-                                "dissolve": 50
-                            },
-                            {
-                                "value": "WineSOFT",
-                                "name": "annotation_c",
-                                "font": "NanumGothic-Bold.ttf",
-                                "fontSize": 50,
-                                "fontColor": "#000000",
-                                "textAlign": "center",
-                                "backgroundWidth": 0,
-                                "backgroundHeight": 0,
-                                "backgroundColor": "#FFFFFF",
-                                "gravity": "c",
-                                "geometry": "+0+0",
-                                "dissolve": 50
-                            },
-                            {
-                                "value": "WineSOFT",
-                                "name": "annotation_e",
-                                "font": "NanumGothic-Bold.ttf",
-                                "fontSize": 50,
-                                "fontColor": "#000000",
-                                "textAlign": "center",
-                                "backgroundWidth": 0,
-                                "backgroundHeight": 0,
-                                "backgroundColor": "#FFFFFF",
-                                "gravity": "e",
-                                "geometry": "+0+0",
-                                "dissolve": 50
-                            },
-                            {
-                                "value": "WineSOFT",
-                                "name": "annotation_sw",
-                                "font": "NanumGothic-Bold.ttf",
-                                "fontSize": 50,
-                                "fontColor": "#000000",
-                                "textAlign": "center",
-                                "backgroundWidth": 0,
-                                "backgroundHeight": 0,
-                                "backgroundColor": "#FFFFFF",
-                                "gravity": "sw",
-                                "geometry": "+0+0",
-                                "dissolve": 50
-                            },
-                            {
-                                "value": "WineSOFT",
-                                "name": "annotation_s",
-                                "font": "NanumGothic-Bold.ttf",
-                                "fontSize": 50,
-                                "fontColor": "#000000",
-                                "textAlign": "center",
-                                "backgroundWidth": 0,
-                                "backgroundHeight": 0,
-                                "backgroundColor": "#FFFFFF",
-                                "gravity": "s",
-                                "geometry": "+0+0",
-                                "dissolve": 50
-                            },
-                            {
-                                "value": "WineSOFT",
-                                "name": "annotation_se",
-                                "font": "NanumGothic-Bold.ttf",
-                                "fontSize": 50,
-                                "fontColor": "#000000",
-                                "textAlign": "center",
-                                "backgroundWidth": 0,
-                                "backgroundHeight": 0,
-                                "backgroundColor": "#FFFFFF",
                                 "gravity": "se",
                                 "geometry": "+0+0",
                                 "dissolve": 50
