@@ -1,28 +1,33 @@
 {
     "meta": {
-        "version": 1,
-        "hostName": "winesoftQA",
+        "version": "1",
+        "hostName": "myName",
         "admin": "admin@example.com",
-        "defaultHosting": "qa.winesoft.co.kr"
+        "defaultHosting": "{{vhostName}}"
     },
-    "hosting": [
-        {
-            "name": "qa.winesoft.co.kr",
-            "enable": true,
-            "listen": "*:80",
-            "origin": {
-                "protocol": "http",
-                "address": [
-                    "192.168.0.50"
-                ]
+    "env": {
+        "management": {
+            "api": {
+                "port": 10040,
+                "defaultRole": "admin",
+                "multipartName": "settingFile"
             },
-            "functions": {
-                "contents": {
-                    "dims": {
-                        "meta": {}
+            "server": {
+                "enable": true,
+                "features": {
+                    "setting": {
+                        "enable": true,
+                        "feed": {
+                            "type": "apiPolling",
+                            "info": {
+                                "url": "http://158.247.204.50:8080/setting/apipolling",
+                                "schedule": "*/3 * * * * *",
+                                "timeout": 5
+                            }
+                        }
                     }
                 }
             }
         }
-    ]
+    }
 }
