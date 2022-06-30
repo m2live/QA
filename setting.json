@@ -3,31 +3,6 @@
         "version": "1",
         "hostName": "myName",
         "admin": "admin@example.com",
-        "defaultHosting": "{{vhostName}}"
-    },
-    "env": {
-        "management": {
-            "api": {
-                "port": 10040,
-                "defaultRole": "admin",
-                "multipartName": "settingFile"
-            },
-            "server": {
-                "enable": true,
-                "features": {
-                    "setting": {
-                        "enable": true,
-                        "feed": {
-                            "type": "apiPolling",
-                            "info": {
-                                "url": "http://158.247.204.50:8080/setting/apipolling",
-                                "schedule": "*/3 * * * * *",
-                                "timeout": 5
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        "defaultHosting": "qa.winesoft.co.kr"
     }
 }
