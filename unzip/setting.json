@@ -1,10 +1,15 @@
 {
+    "meta": {
+        "hostname": "",
+        "admin": "",
+        "defaultHosting": "demo.unzip.com"
+    },
     "hosting": [
         {
             "origin": {
                 "protocol": "http",
                 "address": [
-                    "127.0.0.1:8585"
+                    "141.164.49.179"
                 ]
             },
             "enable": true,
