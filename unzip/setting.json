@@ -1,0 +1,68 @@
+{
+    "hosting": [
+        {
+            "origin": {
+                "protocol": "http",
+                "address": [
+                    "127.0.0.1:8585"
+                ]
+            },
+            "enable": true,
+            "listen": "*:80",
+            "name": "demo.unzip.com",
+            "functions": {
+                "contents": {
+                    "unzip": {
+                        "meta": {
+                            "enable": true,
+                            "keyword": "unzip"
+                        },
+                        "contentTypes": {
+                            "default": "application/octet-stream",
+                            "map": [
+                                {
+                                    "extension": "opf",
+                                    "value": "application/oebps-package+xml"
+                                },
+                                {
+                                    "extension": "bin",
+                                    "value": "application/x-binary"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "env": {
+        "properties": {
+            "live": {
+                "enable": true
+            },
+            "masterProcess": {
+                "enable": true,
+                "title": "m2m"
+            },
+            "coreWorkers": {
+                "enable": true,
+                "processName": "m2c",
+                "count": 0
+            }
+        }
+    },
+    "functions": {
+        "contents": {
+            "unzip": {
+                "meta": {
+                    "enable": false,
+                    "keyword": "unzip"
+                },
+                "contentTypes": {
+                    "default": "application/octet-stream",
+                    "map": []
+                }
+            }
+        }
+    }
+}
