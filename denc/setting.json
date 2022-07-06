@@ -2,7 +2,7 @@
     "meta": {
         "hostname": "",
         "admin": "",
-        "defaultHosting": "demo.denc.com"
+        "defaultHosting": "denchunk-RC4.com"
     },
     "hosting": [
         {
@@ -14,12 +14,12 @@
             },
             "enable": true,
             "listen": "*:80",
-            "name": "demo.denc.com",
+            "name": "denchunk-RC4.com",
             "functions": {
                 "contents": {
                     "denc": {
                         "chunk": {
-                            "enable": false,
+                            "enable": true,
                             "keyword": "denchunk",
                             "sampling": {
                                 "enable": false,
@@ -29,27 +29,130 @@
                             },
                             "encryption": {
                                 "algorithm": "RC4",
-                                "iv": "",
-                                "token": "",
-                                "key": "$token",
-                                "keyHash": "none"
-                            }
-                        },
-                        "bulk": {
-                            "enable": false,
-                            "keyword": "dencbulk",
-                            "maxSourceSize": 500,
-                            "encrypt": {
-                                "algorithm": "RC4",
-                                "iv": "",
-                                "token": "",
+                                "iv": "abcdefg",
+                                "token": "0123456789",
                                 "key": "$token",
                                 "keyHash": "none"
                             }
                         }
                     }
                 }
-            }
+            },
+            "urlRewrites": [
+                {
+                    "accessLogUrl": "Replace",
+                    "pattern": "(.*)/denchunk-RC4/(.*)",
+                    "replace": "denchunk-RC4.com/#2"
+                }
+            ]
+        },
+        {
+            "origin": {
+                "protocol": "http",
+                "address": [
+                    "141.164.49.179"
+                ]
+            },
+            "enable": true,
+            "listen": "*:80",
+            "name": "dnecbulk-RC4.com",
+            "functions": {
+                "contents": {
+                    "denc": {
+                        "bulk": {
+                            "enable": true,
+                            "keyword": "dencbulk",
+                            "maxSourceSize": 1,
+                            "encrypt": {
+                                "algorithm": "RC4",
+                                "iv": "abcdefg",
+                                "token": "0123456789",
+                                "key": "$token",
+                                "keyHash": "none"
+                            }
+                        }
+                    }
+                }
+            },
+            "urlRewrites": [
+                {
+                    "accessLogUrl": "Replace",
+                    "pattern": "(.*)/dencbulk-RC4/(.*)",
+                    "replace": "dencbulk-RC4.com/#2"
+                }
+            ]
+        },
+        {
+            "origin": {
+                "protocol": "http",
+                "address": [
+                    "141.164.49.179"
+                ]
+            },
+            "enable": true,
+            "listen": "*:80",
+            "name": "dnecbulk-RC4.com",
+            "functions": {
+                "contents": {
+                    "denc": {
+                        "bulk": {
+                            "enable": true,
+                            "keyword": "dencbulk",
+                            "maxSourceSize": 1,
+                            "encrypt": {
+                                "algorithm": "AES_128_CBC",
+                                "iv": "abcdefghijklmnop",
+                                "token": "0123456789123456",
+                                "key": "$token",
+                                "keyHash": "none"
+                            }
+                        }
+                    }
+                }
+            },
+            "urlRewrites": [
+                {
+                    "accessLogUrl": "Replace",
+                    "pattern": "(.*)/dencbulk-AES_128/(.*)",
+                    "replace": "dencbulk-AES_128.com/#2"
+                }
+            ]
+        },
+        {
+            "origin": {
+                "protocol": "http",
+                "address": [
+                    "141.164.49.179"
+                ]
+            },
+            "enable": true,
+            "listen": "*:80",
+            "name": "dnecbulk-RC4.com",
+            "functions": {
+                "contents": {
+                    "denc": {
+                        "bulk": {
+                            "enable": true,
+                            "keyword": "dencbulk",
+                            "maxSourceSize": 1,
+                            "encrypt": {
+                                "algorithm": "AES_192_CBC",
+                                "iv": "abcdefghijklmnop",
+                                "token": "012345678912345678912345",
+                                "key": "$token",
+                                "keyHash": "none"
+                            }
+                        }
+                    }
+                }
+            },
+            "urlRewrites": [
+                {
+                    "accessLogUrl": "Replace",
+                    "pattern": "(.*)/dencbulk-AES_192/(.*)",
+                    "replace": "dencbulk-AES_192.com/#2"
+                }
+            ]
         }
     ],
     "env": {
