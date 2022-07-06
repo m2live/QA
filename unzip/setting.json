@@ -27,11 +27,11 @@
                             "map": [
                                 {
                                     "extension": "opf",
-                                    "value": "application/oebps-package+xml"
+                                    "value": "opf/override_content-type"
                                 },
                                 {
-                                    "extension": "bin",
-                                    "value": "application/x-binary"
+                                    "extension": "xml",
+                                    "value": "xml/override_content-type2"
                                 }
                             ]
                         }
