@@ -91,7 +91,7 @@
             },
             "enable": true,
             "listen": "*:80",
-            "name": "dnecbulk-RC4.com",
+            "name": "dnecbulk-AES_128.com",
             "functions": {
                 "contents": {
                     "denc": {
@@ -127,7 +127,7 @@
             },
             "enable": true,
             "listen": "*:80",
-            "name": "dnecbulk-RC4.com",
+            "name": "dnecbulk-AES_192.com",
             "functions": {
                 "contents": {
                     "denc": {
