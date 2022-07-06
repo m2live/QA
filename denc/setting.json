@@ -54,7 +54,7 @@
             },
             "enable": true,
             "listen": "*:80",
-            "name": "dencubulk-RC4.com",
+            "name": "dencbulk-RC4.com",
             "functions": {
                 "contents": {
                     "denc": {
@@ -90,7 +90,7 @@
             },
             "enable": true,
             "listen": "*:80",
-            "name": "dencubulk-AES_128.com",
+            "name": "dencbulk-AES_128.com",
             "functions": {
                 "contents": {
                     "denc": {
@@ -126,7 +126,7 @@
             },
             "enable": true,
             "listen": "*:80",
-            "name": "dencubulk-AES_192.com",
+            "name": "dencbulk-AES_192.com",
             "functions": {
                 "contents": {
                     "denc": {
