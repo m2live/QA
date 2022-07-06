@@ -1,8 +1,7 @@
 {
     "meta": {
         "hostname": "",
-        "admin": "",
-        "defaultHosting": "denchunk-RC4.com"
+        "admin": ""
     },
     "hosting": [
         {
@@ -55,7 +54,7 @@
             },
             "enable": true,
             "listen": "*:80",
-            "name": "dnecbulk-RC4.com",
+            "name": "dencubulk-RC4.com",
             "functions": {
                 "contents": {
                     "denc": {
@@ -91,7 +90,7 @@
             },
             "enable": true,
             "listen": "*:80",
-            "name": "dnecbulk-AES_128.com",
+            "name": "dencubulk-AES_128.com",
             "functions": {
                 "contents": {
                     "denc": {
@@ -127,7 +126,7 @@
             },
             "enable": true,
             "listen": "*:80",
-            "name": "dnecbulk-AES_192.com",
+            "name": "dencubulk-AES_192.com",
             "functions": {
                 "contents": {
                     "denc": {
