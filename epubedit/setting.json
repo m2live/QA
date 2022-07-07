@@ -122,7 +122,7 @@
             },
             "enable": true,
             "listen": "*:80",
-            "name": "epub-trim-pageSpread.com",
+            "name": "epub-trim-pagespread.com",
             "functions": {
                 "contents": {
                     "unzip": {
@@ -161,8 +161,8 @@
             "urlRewrites": [
                 {
                     "accessLogUrl": "Replace",
-                    "pattern": "(.*)/epub-trim-pageSpread/(.*)",
-                    "replace": "epub-trim-pageSpread.com/#2"
+                    "pattern": "(.*)/epub-trim-pagespread/(.*)",
+                    "replace": "epub-trim-pagespread.com/#2"
                 }
             ]
         },
