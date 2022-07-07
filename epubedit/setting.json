@@ -292,7 +292,7 @@
                                     "name": "resize200",
                                     "matchingList": [
                                         {
-                                            "pattern": "/image/(.*).jpg",
+                                            "pattern": "/image/([^/]+).jpg",
                                             "replace": "/image/#1.jpg/dims/resize/200"
                                         }
                                     ]
@@ -314,7 +314,7 @@
                                     "name": "resize500",
                                     "matchingList": [
                                         {
-                                            "pattern": "/image/(.*).jpg",
+                                            "pattern": "/image/([^/]+).jpg",
                                             "replace": "/image/#1.jpg/dims/resize/500"
                                         }
                                     ]
@@ -323,7 +323,7 @@
                                     "name": "encryt",
                                     "matchingList": [
                                         {
-                                            "pattern": "/image/(.*).jpg",
+                                            "pattern": "/image/([^/]+).jpg",
                                             "replace": "/image/#1.jpg/dencbulk/true"
                                         }
                                     ]
@@ -332,7 +332,7 @@
                                     "name": "resize700encryt",
                                     "matchingList:": [
                                         {
-                                            "pattern": "/image/(.*).jpg",
+                                            "pattern": "/image/([^/]+).jpg",
                                             "replace": "/image/#1.jpg/dims/resize/700/dencbulk/true"
                                         }
                                     ]
