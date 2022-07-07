@@ -293,7 +293,7 @@
                                     "matchingList": [
                                         {
                                             "pattern": "/image/(.*).jpg",
-                                            "replace": "/image/(.*).jpg/dims/resize/200"
+                                            "replace": "/image/#1.jpg/dims/resize/200"
                                         }
                                     ]
                                 },
@@ -315,7 +315,7 @@
                                     "matchingList": [
                                         {
                                             "pattern": "/image/(.*).jpg",
-                                            "replace": "/image/(.*).jpg/dims/resize/500"
+                                            "replace": "/image/#1.jpg/dims/resize/500"
                                         }
                                     ]
                                 },
@@ -324,7 +324,7 @@
                                     "matchingList": [
                                         {
                                             "pattern": "/image/(.*).jpg",
-                                            "replace": "/image/(.*).jpg/dencbulk/true"
+                                            "replace": "/image/#1.jpg/dencbulk/true"
                                         }
                                     ]
                                 },
@@ -333,7 +333,7 @@
                                     "matchingList:": [
                                         {
                                             "pattern": "/image/(.*).jpg",
-                                            "replace": "/image/(.*).jpg/dims/resize/700/dencbulk/true"
+                                            "replace": "/image/#1.jpg/dims/resize/700/dencbulk/true"
                                         }
                                     ]
                                 }
