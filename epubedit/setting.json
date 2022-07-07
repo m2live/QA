@@ -85,7 +85,10 @@
                             "keyword": "epubedit"
                         },
                         "trim": {
-                            "prefix": [],
+                            "prefix": [
+                                "i-",
+                                "p-"
+                            ],
                             "include": [
                                 "id=\"cover\"",
                                 "id=\"toc\""
@@ -138,7 +141,10 @@
                             "keyword": "epubedit"
                         },
                         "trim": {
-                            "prefix": [],
+                            "prefix": [
+                                "i-",
+                                "p-"
+                            ],
                             "include": [],
                             "pageSpread": {
                                 "enable": true,
