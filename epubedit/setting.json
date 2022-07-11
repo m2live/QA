@@ -330,7 +330,7 @@
                                 },
                                 {
                                     "name": "resize700encrypt",
-                                    "matchingList:": [
+                                    "matchingList": [
                                         {
                                             "pattern": "/image/([^/]+).jpg",
                                             "replace": "/image/#1.jpg/dims/resize/700/dencbulk/true"
