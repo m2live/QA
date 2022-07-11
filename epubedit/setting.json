@@ -320,7 +320,7 @@
                                     ]
                                 },
                                 {
-                                    "name": "encryt",
+                                    "name": "encrypt",
                                     "matchingList": [
                                         {
                                             "pattern": "/image/([^/]+).jpg",
