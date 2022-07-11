@@ -329,7 +329,7 @@
                                     ]
                                 },
                                 {
-                                    "name": "resize700encryt",
+                                    "name": "resize700encrypt",
                                     "matchingList:": [
                                         {
                                             "pattern": "/image/([^/]+).jpg",
