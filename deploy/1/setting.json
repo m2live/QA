@@ -456,36 +456,17 @@
                     "mp4edit": {
                         "meta": {
                             "enable": true,
-                            "keyword": "mp4edit",
-                            "useAllTracks": true,
-                            "trimMaxRatio": 0
+                            "keyword": "mp4edit"
                         },
-                        "hls": {
-                            "duration": 10,
-                            "indexName": "index.m3u8",
-                            "playlist": {
-                                "version": 3,
-                                "alternates": false,
-                                "alternatesName": "playlist.m3u8",
-                                "sequence": 0
-                            }
+                        "trim": {
+                            "useAllTracks": true,
+                            "maxRatio": 0
                         }
                     },
                     "mp3edit": {
                         "meta": {
                             "enable": true,
-                            "keyword": "mp3edit",
-                            "segmentType": "MP3"
-                        },
-                        "hls": {
-                            "duration": 10,
-                            "indexName": "index.m3u8",
-                            "playlist": {
-                                "version": 3,
-                                "alternates": false,
-                                "alternatesName": "playplaylist.m3u8",
-                                "sequence": 0
-                            }
+                            "keyword": "mp3edit"
                         }
                     },
                     "dims": {
@@ -614,6 +595,39 @@
                                         "action": "bypass"
                                     }
                                 ]
+                            }
+                        }
+                    },
+                    "mp4hls": {
+                        "meta": {
+                            "enable": true,
+                            "keyword": "mp4hls"
+                        },
+                        "hls": {
+                            "duration": 10,
+                            "indexName": "index.m3u8",
+                            "playlist": {
+                                "version": 3,
+                                "alternates": false,
+                                "alternatesName": "playlist.m3u8",
+                                "sequence": 0
+                            }
+                        }
+                    },
+                    "mp3hls": {
+                        "meta": {
+                            "enable": true,
+                            "keyword": "mp3hls",
+                            "segmentType": "MP3"
+                        },
+                        "hls": {
+                            "duration": 10,
+                            "indexName": "index.m3u8",
+                            "playlist": {
+                                "version": 3,
+                                "alternates": false,
+                                "alternatesName": "playplaylist.m3u8",
+                                "sequence": 0
                             }
                         }
                     }
