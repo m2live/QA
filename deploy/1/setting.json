@@ -617,12 +617,12 @@
                     "mp3hls": {
                         "meta": {
                             "enable": true,
-                            "keyword": "mp3hls",
-                            "segmentType": "MP3"
+                            "keyword": "mp3hls"
                         },
                         "hls": {
                             "duration": 10,
                             "indexName": "index.m3u8",
+                            "segmentType": "MP3",
                             "playlist": {
                                 "version": 3,
                                 "alternates": false,
