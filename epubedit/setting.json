@@ -377,6 +377,25 @@
                 "retention": 10,
                 "warning": false,
                 "compression": false
+            },
+            "repository": {
+                "list": [
+                    {
+                        "name": "m2live",
+                        "type": "aws-s3",
+                        "rolling": "* *",
+                        "path": "/log/domain={domain}/year={timestamp.year}/month={timestamp.month}/day={timestamp.day}/{hostname}_{timestamp.hour}{timestamp.minute}_{logtype}.log.gz",
+                        "compression": {
+                            "enable": true
+                        },
+                        "endpoint": {
+                            "bucket": "m2livex",
+                            "region": "ap-northeast-2",
+                            "accessKey": "AKIAUPBJJDGA57S4RU3X",
+                            "secretKey": "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"
+                        }
+                    }
+                ]
             }
         },
         "network": {
@@ -1156,7 +1175,8 @@
                     "xff": "all",
                     "form": "m2",
                     "format": null,
-                    "loopback": false
+                    "loopback": false,
+                    "backup": ["m2live"]
                 },
                 "origin": {
                     "enable": true,
@@ -1165,7 +1185,8 @@
                     },
                     "retention": 10,
                     "compression": false,
-                    "loopback": false
+                    "loopback": false,
+                    "backup": ["m2live"]
                 },
                 "dims": {
                     "enable": true,
