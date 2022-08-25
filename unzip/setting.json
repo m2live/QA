@@ -73,7 +73,7 @@
                         "name": "m2live",
                         "type": "aws-s3",
                         "rolling": "* *",
-                        "path": "/m2livex/{domain}/year={timestamp.year}/month={timestamp.month}/day={timestamp.day}/{hostname}_{timestamp.hour}{timestamp.minute}_{logtype}.log.gz",
+                        "path": "/log/domain={domain}/year={timestamp.year}/month={timestamp.month}/day={timestamp.day}/{hostname}_{timestamp.hour}{timestamp.minute}_{logtype}.log.gz",
                         "compression": {
                             "enable": true
                         },
