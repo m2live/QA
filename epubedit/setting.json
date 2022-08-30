@@ -243,9 +243,11 @@
                         }
                     },
                     "denc": {
-                        "bulk": {
+                        "meta": {
                             "enable": true,
-                            "keyword": "dencbulk",
+                            "keyword": "denc"
+                        },
+                        "bulk": {
                             "maxSourceSize": 500,
                             "encrypt": {
                                 "algorithm": "AES_128_CBC",
@@ -324,7 +326,7 @@
                                     "matchingList": [
                                         {
                                             "pattern": "/image/([^/]+).jpg",
-                                            "replace": "/image/#1.jpg/dencbulk/true"
+                                            "replace": "/image/#1.jpg/denc/bulk"
                                         }
                                     ]
                                 },
@@ -333,7 +335,7 @@
                                     "matchingList": [
                                         {
                                             "pattern": "/image/([^/]+).jpg",
-                                            "replace": "/image/#1.jpg/dims/resize/700/dencbulk/true"
+                                            "replace": "/image/#1.jpg/dims/resize/700/denc/bulk"
                                         }
                                     ]
                                 }
