@@ -540,7 +540,7 @@
                     {
                         "mount": "/user/cache1",
                         "quota": 100,
-                        "quotaUnit": "size"
+                        "quotaUnit": "ratio"
                     }
                 ],
                 "cleanup": {
