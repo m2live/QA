@@ -223,7 +223,7 @@
                         }
                     },
                     "session": {
-                        "keepAliveSec": 10
+                        "keepAliveSec": 30
                     },
                     "accessControl": {
                         "enable": false,
@@ -272,8 +272,8 @@
                         }
                     },
                     "session": {
-                        "connectTimeout": 3,
-                        "receiveTimeout": 10,
+                        "connectTimeout": 10,
+                        "receiveTimeout": 30,
                         "reuseTimeout": 60,
                         "busyCount": 0,
                         "balanceMode": "RoundRobin"
