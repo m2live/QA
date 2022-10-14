@@ -223,7 +223,7 @@
                         }
                     },
                     "session": {
-                        "keepAliveSec": 30
+                        "keepAliveSec": 60
                     },
                     "accessControl": {
                         "enable": false,
