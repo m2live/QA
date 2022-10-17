@@ -5,44 +5,6 @@
         "defaultHosting": "qa.winesoft.co.kr"
     },
     "env": {
-        "network": {
-            "passiveSockets": {
-                "listenIps": [
-                    "0.0.0.0"
-                ],
-                "maxCount": 80000,
-                "reopenRatio": 75
-            },
-            "https": {
-                "frontEnd": {
-                    "enableAES-NI": true,
-                    "enableSni": false
-                }
-            },
-            "http2": {
-                "enable": false,
-                "keepAliveSec": 10,
-                "concurrentStreamMaxCount": 10
-            }
-        },
-        "rt": {
-            "localCacheStorage": {
-                "cleanup": {
-                    "time": "02:00",
-                    "age": 0,
-                    "emptyDir": "delete",
-                    "fileCount": 0
-                }
-            },
-            "properties": {
-                "writeCountSmallFile": 0,
-                "enableEmergencyMode": false,
-                "memoryRatio": 100,
-                "memoryRatioFree": 40,
-                "memoryRatioContents": 50,
-                "enableSyncStale": true
-            }
-        },
         "log": {
             "info": {
                 "enable": true,
@@ -92,113 +54,15 @@
     },
     "functions": {
         "network": {
-            "cache": {
-                "ttl": {
-                    "policies": {
-                        "priority": [
-                            "cc_nocache",
-                            "custom",
-                            "cc_maxage",
-                            "rescode"
-                        ],
-                        "originBusy": 3,
-                        "extendBy4xx": false,
-                        "extendBy5xx": true,
-                        "unvalidatableObjectResCode": 0
-                    },
-                    "resCode": {
-                        "noCache": {
-                            "sec": 5,
-                            "ratio": 0,
-                            "max": 5,
-                            "maxAge": 0
-                        },
-                        "res2xx": {
-                            "sec": 1800,
-                            "ratio": 20,
-                            "max": 86400
-                        },
-                        "res3xx": {
-                            "sec": 300
-                        },
-                        "res4xx": {
-                            "sec": 30
-                        },
-                        "res5xx": {
-                            "sec": 30
-                        },
-                        "onError": {
-                            "connectTimeout": 3,
-                            "receiveTimeout": 3
-                        }
-                    }
-                },
-                "cachingKey": {
-                    "case": {
-                        "enable": true
-                    },
-                    "queryString": {
-                        "enable": true
-                    },
-                    "acceptEncoding": {
-                        "enable": true
-                    },
-                    "postMethod": {
-                        "enable": false,
-                        "bodyContentLengthMax": 102400,
-                        "bodySensitive": true
-                    }
-                },
-                "purge": {
-                    "queryStringCollective": false,
-                    "noCacheRequestExpire": false,
-                    "refreshExpired": true,
-                    "purge2Expire": "NONE",
-                    "rootPurgeExpire": "all",
-                    "rootHardPurge": true,
-                    "resCodeNoCtrlTarget": 200
-                }
-            },
             "http": {
                 "frontEnd": {
                     "headers": {
                         "lastModified": {
                             "rule": "exact"
                         },
-                        "via": {
-                            "enable": true
-                        },
-                        "expires": {
-                            "enable": false,
-                            "base": "Access"
-                        },
-                        "etag": {
-                            "enable": true
-                        },
-                        "age": {
-                            "enable": false
-                        },
                         "ifRange": {
                             "enable": false,
                             "purge": false
-                        },
-                        "server": {
-                            "enable": true
-                        },
-                        "connection": {
-                            "directive": "keep-alive"
-                        },
-                        "keepAlive": {
-                            "enable": true,
-                            "max": 0
-                        },
-                        "modify": {
-                            "enable": false,
-                            "matchFirstOnly": false
-                        },
-                        "cacheOriginal": {
-                            "enable": false,
-                            "standard": false
                         }
                     },
                     "bypass": {
@@ -218,134 +82,23 @@
                             "enableSticky": true
                         },
                         "session": {
-                            "connectTimeout": 5,
+                            "connectTimeout": 10,
                             "receiveTimeout": 300
                         }
                     },
                     "session": {
                         "keepAliveSec": 60
-                    },
-                    "accessControl": {
-                        "enable": false,
-                        "mode": "Allow",
-                        "denialCode": 401
-                    },
-                    "compression": {
-                        "meta": {
-                            "enable": false,
-                            "keyword": "hcpr",
-                            "minSrcSize": 2,
-                            "maxSrcSize": 2048
-                        },
-                        "gzip": {
-                            "level": 6
-                        },
-                        "brotli": {
-                            "window": 22,
-                            "quality": 11
-                        }
-                    },
-                    "customErrorPage": {
-                        "resCode": 0
                     }
                 },
                 "backEnd": {
-                    "headers": {
-                        "modify": {
-                            "enable": false,
-                            "matchFirstOnly": false
-                        },
-                        "ifRange": {
-                            "enable": false
-                        },
-                        "xff": {
-                            "appendProxy": true
-                        },
-                        "initByFullRange": {
-                            "enable": false
-                        },
-                        "etag": {
-                            "enable": false
-                        },
-                        "wholeClientRequest": {
-                            "enable": false
-                        }
-                    },
                     "session": {
                         "connectTimeout": 10,
-                        "receiveTimeout": 30,
-                        "reuseTimeout": 60,
-                        "busyCount": 0,
-                        "balanceMode": "RoundRobin"
-                    },
-                    "dns": {
-                        "ttlMax": 0,
-                        "ttlMin": 0
-                    },
-                    "health": {
-                        "exclusion": {
-                            "count": 3
-                        },
-                        "recovery": {
-                            "count": 5,
-                            "cycle": 10,
-                            "responseCode": 0,
-                            "url": "/",
-                            "log": true
-                        }
-                    },
-                    "redirectionTrace": {
-                        "enable": false
-                    },
-                    "authorization": {
-                        "type": "AWS-S3",
-                        "enable": false
-                    }
-                }
-            }
-        },
-        "contents": {
-            "dims": {
-                "meta": {
-                    "enable": false,
-                    "keyword": "",
-                    "minSourceSize": 0,
-                    "maxSourceSize": 10
-                },
-                "gif": {
-                    "firstFrameOnly": false,
-                    "selectMinSize": false
-                },
-                "quality": {
-                    "max": 100,
-                    "format": 100
-                }
-            },
-            "denc": {
-                "bulk": {
-                    "enable": false,
-                    "keyword": "",
-                    "maxSourceSize": 500,
-                    "encrypt": {
-                        "algorithm": "RC4"
+                        "receiveTimeout": 30
                     }
                 }
             }
         },
         "operations": {
-            "stats": {
-                "level": {
-                    "depth": 0,
-                    "accumulate": false
-                },
-                "https": {
-                    "seperate": false
-                },
-                "loopback": {
-                    "passive": false,
-                    "active": false
-                }
-            },
             "log": {
                 "meta": {
                     "dir": "/ston_log"
