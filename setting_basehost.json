@@ -1,0 +1,9 @@
+{
+    "name": "m2 basehost test",
+    "origin": {
+        "protocol": "http",
+        "address": [
+            "gump-origin.ap-south-1.linodeobjects.com"
+        ]
+    }
+}

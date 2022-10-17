@@ -1,8 +1,26 @@
 {
- "meta":{
-    "version" : 1,
-    "hostName": "winesoftQA",
-    "admin": "admin@example.com",
-    "defaultHosting": "qa.dims.com"
-  }
+    "meta": {
+        "hostname": "",
+        "admin": "",
+        "defaultHosting": "basehost.com"
+    },
+    "hosting": [
+        {
+            "name": "basehost.com",
+            "mode": {
+                "basehost": "./setting_basehost.json"
+            }
+        }
+    ],
+    "functions": {
+        "network": {
+            "http": {
+                "frontEnd": {
+                    "session": {
+                        "keepAliveSec": 60
+                    }
+                }
+            }
+        }
+    }
 }
