@@ -82,7 +82,7 @@
                             "enableSticky": true
                         },
                         "session": {
-                            "connectTimeout": 10,
+                            "connectTimeout": 30,
                             "receiveTimeout": 300
                         }
                     },
