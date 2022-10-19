@@ -92,7 +92,7 @@
                 },
                 "backEnd": {
                     "session": {
-                        "connectTimeout": 10,
+                        "connectTimeout": 15,
                         "receiveTimeout": 30
                     }
                 }
