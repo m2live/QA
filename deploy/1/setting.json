@@ -54,6 +54,16 @@
     },
     "functions": {
         "network": {
+            "cache": {
+                "ttl": {
+                    "resCode": {
+                        "onError": {
+                            "connectTimeout": 10,
+                            "receiveTimeout": 10
+                        }
+                    }
+                }
+            },
             "http": {
                 "frontEnd": {
                     "headers": {
