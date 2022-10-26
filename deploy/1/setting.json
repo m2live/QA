@@ -231,7 +231,7 @@
             "origin": {
                 "protocol": "HTTP",
                 "address": [
-                    "170.187.229.169"
+                    "gump-origin.ap-south-1.linodeobjects.com"
                 ]
             },
             "listen": "*:80",
