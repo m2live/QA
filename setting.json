@@ -1,28 +1,30 @@
 {
     "hosting": [
         {
+            "name": "foo.com",
+            "enable": true,
+            "listen": "*:80",
+            "origin": {
+                "address": [
+                    "kr.origin.com"
+                ]
+            },
+            "aliases": [
+                "foo.co.kr"
+            ]
+        },
+        {
             "name": "bar.com",
             "enable": true,
-            "listen": "*:3000",
-            "origin": {
-                "address": [
-                    "eu.origin.com"
-                ]
-            }
-        },
-        {
-            "name": "baz2.com",
-            "enable": false,
             "listen": "*:80",
-            "aliases": [],
             "origin": {
                 "address": [
-                    "us.origin.com"
+                    "kr.origin.com"
                 ]
             }
         },
         {
-            "name": "baz2.com",
+            "name": "baz.com",
             "enable": true,
             "listen": "*:3000",
             "aliases": [
