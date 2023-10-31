@@ -1,8 +1,129 @@
 {
- "meta":{
-    "version" : 1,
-    "hostName": "winesoftQA",
-    "admin": "admin@example.com",
-    "defaultHosting": "qa.dims.com"
-  }
+    "hosting": [
+        {
+            "name": "bar.com",
+            "enable": true,
+            "listen": "*:3000",
+            "origin": {
+                "address": [
+                    "eu.origin.com"
+                ]
+            }
+        },
+        {
+            "name": "baz2.com",
+            "enable": false,
+            "listen": "*:80",
+            "aliases": [],
+            "origin": {
+                "address": [
+                    "us.origin.com"
+                ]
+            }
+        },
+        {
+            "name": "baz2.com",
+            "enable": true,
+            "listen": "*:3000",
+            "aliases": [
+                "baz.com"
+            ],
+            "origin": {
+                "address": [
+                    "kr.origin.com"
+                ]
+            },
+            "hook": {
+                "enable": true
+            },
+            "functions": {
+                "backend": {
+                    "aws_s3": {
+                        "meta": {
+                            "enable": false
+                        }
+                    }
+                },
+                "contents": {
+                    "dims": {
+                        "meta": {
+                            "enable": false,
+                            "keyword": "dims",
+                            "minSourceSize": 0,
+                            "maxSourceSize": 30
+                        },
+                        "quality": {
+                            "max": 99,
+                            "format": 99,
+                            "upscale": true
+                        },
+                        "jpg": {
+                            "preoptimize": {
+                                "enable": true,
+                                "minSize": 1024
+                            }
+                        },
+                        "gif": {
+                            "firstFrameOnly": false,
+                            "selectMinSize": false
+                        },
+                        "composite": [],
+                        "byOriginal": []
+                    },
+                    "hyperdims": {
+                        "meta": {
+                            "enable": false,
+                            "keyword": "hdims",
+                            "maxSourceSize": 100
+                        },
+                        "image": {
+                            "defaultQuality": 99,
+                            "resizebr": []
+                        }
+                    },
+                    "pagespeed": {
+                        "meta": {
+                            "enable": true,
+                            "keyword": "pagespeedafter"
+                        },
+                        "optimg": {
+                            "dims": "hdims",
+                            "proxy": "proxy",
+                            "matchingList": [],
+                            "formats": ["webp"],
+                            "lazyload": {
+                                "enable": true,
+                                "extendTarget": true,
+                                "ignoreSelectors": []
+                            }
+                        }
+                    },
+                    "asisIsEmpty": {
+                        "meta": {
+                            "enable": true
+                        }
+                    }
+                },
+                "network": {
+                    "proxy": {
+                        "meta": {
+                            "enable": true
+                        }
+                    },
+                    "mp3hls": {
+                        "meta": {
+                            "enable": false,
+                            "keyword": "mp3hlsafter"
+                        }
+                    },
+                    "mp4hls": {
+                        "meta": {
+                            "enable": true,
+                            "keyword": "mp4hlsafter"
+                        }
+                    }
+                }
+            }
+        }
+    ]
 }
