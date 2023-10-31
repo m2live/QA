@@ -21,19 +21,6 @@
                 "address": [
                     "kr.origin.com"
                 ]
-            }
-        },
-        {
-            "name": "baz.com",
-            "enable": true,
-            "listen": "*:3000",
-            "aliases": [
-                "baz.com"
-            ],
-            "origin": {
-                "address": [
-                    "kr.origin.com"
-                ]
             },
             "hook": {
                 "enable": true
