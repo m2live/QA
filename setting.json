@@ -1,22 +1,7 @@
 {
     "hosting": [
         {
-            "name": "foo.com",
-            "enable": true,
-            "listen": "*:80",
-            "origin": {
-                "address": [
-                    "kr.origin.com"
-                ]
-            },
-            "aliases": [
-                "foo.co.kr"
-            ]
-        },
-        {
-            "name": "bar.com",
-            "enable": true,
-            "listen": "*:80",
+            "name": "modified1.com",
             "origin": {
                 "address": [
                     "kr.origin.com"
@@ -26,49 +11,71 @@
                 "enable": true
             },
             "functions": {
-                "backend": {
-                    "aws_s3": {
-                        "meta": {
-                            "enable": false
-                        }
-                    }
-                },
                 "contents": {
                     "dims": {
                         "meta": {
-                            "enable": false,
-                            "keyword": "dims"
+                            "enable": true,
+                            "keyword": "dms"
                         }
                     },
                     "hyperdims": {
                         "meta": {
-                            "enable": false
+                            "enable": true,
+                            "keyword": null
                         }
                     },
-                    "pagespeed": {
+                    "transcoder": {
                         "meta": {
-                            "keyword": "pagespeed"
+                            "enable": false,
+                            "keyword": "transcoder"
                         }
-                    }
-                },
-                "network": {
-                    "proxy": {
+                    },
+                    "pagefx": {
                         "meta": {
                             "enable": true
                         }
                     },
-                    "mp3hls": {
+                    "pagedesk": {
                         "meta": {
-                            "enable": false
+                            "enable": true,
+                            "keyword": "pagedesk"
                         }
                     },
-                    "mp4hls": {
+                    "pagemixed": {
                         "meta": {
                             "enable": true
                         }
                     }
                 }
             }
+        },
+        {
+            "name": "modified2.com",
+            "origin": {
+                "address": [
+                    "kr.origin.com"
+                ]
+            },
+            "aliases": [
+                "modified2.co.kr"
+            ],
+            "listen": "*:80",
+            "hook": {
+                "enable": true,
+                "path": "https://example.com/sample.js"
+            }
+        },
+        {
+            "name": "added.com"
+        },
+        {
+            "name": "inactive1.com",
+            "enable": false
+        },
+        {
+            "name": "inactive2.com",
+            "enable": false,
+            "listen": "*:80"
         }
     ]
 }
