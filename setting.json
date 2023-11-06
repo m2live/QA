@@ -35,12 +35,6 @@
                             "enable": true
                         }
                     },
-                    "pagedesk": {
-                        "meta": {
-                            "enable": true,
-                            "keyword": "pagedesk"
-                        }
-                    },
                     "pagemixed": {
                         "meta": {
                             "enable": true
