@@ -3,33 +3,14 @@
         "admin": "",
         "defaultHosting": "basehost.com"
     },
-    "hosting": [
-        {
-            "name": "basehost.com",
-            "mode": {
-                "basehost": "basehost.source.com"
-            },
-            "functions": {
-              "contents": {
-                "dims": {
-                  "meta": {
+    "functions": {
+        "contents": {
+            "dims": {
+                "meta": {
                     "enable": true
-                  }
                 }
-              }
             }
         },
-        {
-            "name": "basehost.source.com",
-            "origin": {
-                "protocol": "http",
-                "address": [
-                    "{{ORI_ADDR}}"
-                ]
-            }
-        }
-    ],
-    "functions": {
         "network": {
             "http": {
                 "frontEnd": {
@@ -41,4 +22,3 @@
         }
     }
 }
-
