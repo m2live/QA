@@ -1,0 +1,24 @@
+{
+    "meta": {
+        "admin": "",
+        "defaultHosting": "basehost.com"
+    },
+    "functions": {
+        "contents": {
+            "dims": {
+                "meta": {
+                    "enable": true
+                }
+            }
+        },
+        "network": {
+            "http": {
+                "frontEnd": {
+                    "session": {
+                        "keepAliveSec": 60
+                    }
+                }
+            }
+        }
+    }
+}
